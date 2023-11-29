@@ -1,0 +1,459 @@
+*{
+	padding:0;
+	margin:0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+
+	list-style: none;
+	text-decoration:none;
+	scroll-behavior: smooth;
+
+}
+:root{
+	--bg-color:#ffffff;
+	--text-color:#22100d;
+	--second-color:#685f78;
+	--main-color:#f66962;
+	--big-font:3.8rem;
+	--h2-font: 2.6rem;
+	--p-font:1.1rem;
+}
+
+body{
+	background: var(--bg-color);
+	color: var(--text-color);
+	  line-height: 1.5;
+}
+header{
+
+	position: fixed;
+	width: 100%;
+	top:0;
+	right: 0;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background:transparent;
+	padding:10px 13%;
+	  height: 125px;
+	transition: all .40s ease;
+
+}
+
+
+.logo img{
+
+	height: auto;
+	width: 150px;
+	max-width: 100%;
+
+}
+
+.navbar{
+	display:flex;
+}
+
+.navbar a{
+	font-weight: 600;
+	color:var(--text-color);
+	font-size: var(--p-font);
+	padding:5px 15px;
+	transition: all .40s ease ;
+
+}
+.navbar a:hover{
+
+	color: var(--main-color);
+}
+
+.header-icons{
+
+
+	display: flex;
+	align-items:center;
+
+}
+.header-icons i{
+
+	margin-left:10px;
+	font-size: 24px;
+	color:var(--text-color);
+	transition: all .40s ease;
+	margin-right: 15px;
+
+}
+.header-icons i:hover{
+	transform:scale(1.2);
+	color:var(--main-color);
+
+}
+#menu-icon{
+	font-size: 34px;
+	color: var(--text-color);
+	z-index: 10001;
+}
+
+.navbar .dropdown {
+    position: relative;
+}
+
+/* ... (your existing styles) */
+
+.navbar .dropdown-content {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    max-height: 400px; /* Adjust this height as needed */
+    overflow-y: auto; /* Add scrollbars if needed */
+    opacity: 0; /* Initially set opacity to 0 */
+    pointer-events: none; /* Disable pointer events to make it not clickable */
+    transition: opacity 0.3s ease-in-out; /* Add a transition for a smooth effect */
+}
+
+
+
+/* ... (your existing styles) */
+
+
+.navbar .dropdown-content a {
+    flex: 1; /* Equal width for each category link */
+    color: black;
+    padding: 12px 16px;
+    display: block;
+    text-align: left;
+    transition: all 0.40s ease;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.navbar .dropdown-content a:hover {
+    background-color: #ddd;
+    color: var(--main-color);
+}
+
+.navbar .dropdown:hover .dropdown-content {
+    display: block;
+     opacity: 1; /* Set opacity to 1 on hover */
+    pointer-events: auto; /* Enable pointer events on hover */
+}
+/* search bar style.....*/
+.SearchBox{
+	height: 30px;
+	display: flex;
+	cursor: pointer;
+		padding: 10px 20px;
+	background: #fff;
+	border-radius: 30px;
+	align-items: center;
+	margin-top: 20px;
+      margin-bottom: 20px;
+
+}
+ .hidden {
+      display: none;
+    }
+.SearchBox:hover input{
+width: 200px;
+}
+.SearchBox input{
+	width: 0;
+	outline: none;
+	border: none;
+	font-weight: 100	;
+	transition: 0.8s;
+	background: transparent;
+}
+.SearchBox a .bx{
+
+	color: #1daf;
+font-size: 18px;
+}
+
+tabs {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      cursor: pointer;
+      padding: 10px;
+      margin-right: 10px;
+      font-weight: bold;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .tab.active {
+      background-color: #007bff;
+      color: #fff;
+    }
+section{
+	padding: 12%;
+}
+
+.center-text{
+	text-align: center;
+
+}
+.center-text h5{
+	color:var(--main-color);
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+.box h3{
+
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom:10px;
+	line-height: 1.3;
+	transition: all .40 ease;
+}
+header.sticky{
+	background: var(--bg-color);
+	padding:12px 13%;
+box-shadow: 0px 4px 15px rgb(0,0,0/8%);	
+}
+
+.courses-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    margin-top: 4rem;
+    width: 100%;
+}
+
+.courses-content a{
+	  color: black;
+}
+
+
+.row {
+    background: var(--bg-color);
+    padding: 0px 0px 10px 0px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 40px rgb(19 8 73 /13%);
+    transition: all .40s ease;
+    flex: 1;
+    max-width: 400px;
+}
+
+
+.row:hover {
+    transform: translateY(-15px);
+}
+
+.row img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px 15px 15px 0px;
+}
+
+.courses-text {
+	padding:35px 20px ;
+
+}
+.courses-text h5{
+	color:var(--main-color);
+	font-size:18px;
+	font-weight: 700;
+}
+.courses-text h3 {
+
+	font-size: 24px;
+	font-weight: 400;
+	line-height: 34px;
+	margin: 15px 0 15px;
+	transition: all .40s ease;
+
+}
+.courses-text h3:hover{
+	color: var(--main-color);
+}
+.courses-text h6 {
+
+	color:#696969;
+	font-size: var(--p-font);
+	font-weight: 400;
+	line-height: 30px;
+	letter-spacing:1px ;
+	margin-bottom: 30px;
+}
+.rating{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	justify-content:space-between ;
+}
+.star i{
+
+	color: var(--main-color);
+	margin-right: 2px;
+	font-size: 17px;
+}
+.review p{
+
+	color:#696969;
+		font-size: var(--p-font);
+		font-weight: 400;
+		letter-spacing: 1px;
+}
+
+/* Button Styles */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}	
+
+.AddToCart {
+    background-color: #3498db; /* Blue color, you can change it */
+    color: #fff; /* White text color */
+}
+
+.AddToCart:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+.favorite-button {
+    background-color: #e74c3c; /* Red color, you can change it */
+    color: #fff; /* White text color */
+}
+
+.favorite-button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+
+
+
+
+
+
+
+
+.footer {
+	display: flex; /* Change from grid to flex */
+	flex-direction: row; /* Make the items line up horizontally */
+	justify-content: space-around; /* Adjust as needed for spacing */
+	gap: 3.5rem;
+	background: #1a242f;
+	left: 0;
+	right: 0;
+	bottom: 0;
+
+}
+
+.footer-content {
+	text-align: center;
+}
+
+.footer-content {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center; /* Center items horizontally */
+}
+.footer-content .footer-logo {
+	margin-bottom: 10px; /* Adjust as needed for vertical spacing */
+}
+.footer-content img {
+	max-width: 30%;
+	height: auto; /* Maintain aspect ratio */
+}
+
+
+
+.footer-content li {
+	margin-bottom: 16px;
+}
+
+.footer-content li a {
+	display: block;
+	color: #d6d6d6;
+	font-size: 15px;
+	font-weight: 400;
+	transition: all 0.4s ease;
+}
+
+.footer-content li a:hover {
+	transform: translateY(-3px) translateX(-5px);
+}
+
+.footer-content p {
+	color: #d6d6d6;
+	font-size: 16px;
+	line-height: 30px;
+	margin: 0;
+}
+
+.icons a {
+	display: inline-block;
+	font-size: 22px;
+	color: #d6d6d6;
+	margin-right: 17px;
+	transition: all 0.4s ease;
+}
+.footer-content.copyright-section {
+	text-align: center;
+	background-color: #1a242f;
+	padding: 10px 0;
+}
+
+.footer-content.copyright-section p {
+	color: #d6d6d6;
+	font-size: 14px;
+	margin: 0;
+}
+.pagination-content {
+  position: relative;
+  height:20vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination-content.pagination {
+  position: relative;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(3px);
+  border-radius: 2px;
+}
+.pagination-content .pagination li {
+  list-style-type: none;
+  display: inline-block;
+}
+.pagination-content  .pagination li a {
+  position: relative;
+  padding: 20px 25px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+.container .pagination li a:hover,
+.container .pagination li.active a {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/****************/
